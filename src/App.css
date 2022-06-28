@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+.App{
+  width: 96vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  border-radius: 20px;
+  
+  background: rgba(255, 255, 255, 0.16);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 1px solid rgba(255, 255, 255, 0.15);
+}.App>.free{
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+}.App>.logo{
+  font-family: 'Rubik Moonrocks', cursive;
+  text-align: center;
+}.App>.left{
+  font-weight: bold;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}.App>.input{
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid pink;
+  background: transparent;
+  margin-bottom: 5px;
+  outline: none;
+}.App>.select{
+  background: transparent;
+  border: 2px solid pink;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 5px;
+}.App>.btn{
+  background: transparent;
+  border: 2px solid pink;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 5px;
+  transition: 0.20s;
+}.loded{
+  width: 150px;
+  height: 150px;
+  border-top: 2px solid pink;
+  border-left: 2px solid pink;
+  border-bottom: 2px solid pink;
+  border-radius: 100%;
+  animation: mymove 5s infinite;
+}
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+  to {transform: rotate(3600deg);}
+}
