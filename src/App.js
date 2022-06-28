@@ -7,7 +7,6 @@ let [phone,setNumber]=useState()
 let [age,setAge]=useState()
 let [style,setSelect]=useState()
 let [left,setLeft]=useState({})
-let [gop,setGop]=useState(localStorage.getItem('done'))
 let [connect,setConnect]=useState(false)
 //chake how many left
 useEffect(()=>{
@@ -16,6 +15,7 @@ async function call() {
     let uri='https://karatejoin.herokuapp.com/'
 let res=await axios.get(uri)
 setLeft(res.data)
+alert(res.data.left)
 setConnect(true)
   } catch (e) {
     alert('somethin is wrong')
@@ -24,24 +24,20 @@ setConnect(true)
 },[])
 //submit
 let submit=async()=>{
-  if (gop) {
-    alert('you already pre registered')
-  }else{
 if (name&&phone&&age&&style) {
   try {
 let uri='https://karatejoin.herokuapp.com/'
  let res=await axios.post(uri,{name,phone,age,style})
  setLeft(res.data)
- localStorage.setItem('done','done')
  alert('you are pre registered now')
 } catch (e) {
-  alert('somethin is wrong')
+  alert('you already registered')
 }
 }else{
   alert('Please enter all credential')
 }
     
-  }
+  
 }
   return (
     <>
@@ -71,6 +67,7 @@ onChange={(e)=>{
 <option value="selfDefence">Self Defence</option>
 <option value="Boxing">Boxing</option>
 <option value="Kickboxing">Kickboxing</option>
+<option value="All">All</option>
 </select>
 <button className='btn' onClick={submit}>Submit</button>
  <p className='left'>{left.left} more left</p>
