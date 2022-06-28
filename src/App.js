@@ -15,7 +15,6 @@ async function call() {
     let uri='https://karatejoin.herokuapp.com/'
 let res=await axios.get(uri)
 setLeft(res.data)
-alert(res.data.left)
 setConnect(true)
   } catch (e) {
     alert('somethin is wrong')
@@ -65,7 +64,6 @@ onChange={(e)=>{
 <option selected disabled>Style</option>
 <option value="Karate">Karate</option>
 <option value="selfDefence">Self Defence</option>
-<option value="Boxing">Boxing</option>
 <option value="Kickboxing">Kickboxing</option>
 <option value="All">All</option>
 </select>
