@@ -12,7 +12,7 @@ let [connect,setConnect]=useState(false)
 useEffect(()=>{
 async function call() {
   try {
-    let uri='https://karatejoin.herokuapp.com/'
+    let uri='https://karate-back.vercel.app/'
 let res=await axios.get(uri)
 setLeft(res.data)
 setConnect(true)
@@ -25,7 +25,7 @@ setConnect(true)
 let submit=async()=>{
 if (name&&phone&&age&&style) {
   try {
-let uri='https://karatejoin.herokuapp.com/'
+let uri='https://karate-back.vercel.app/'
  let res=await axios.post(uri,{name,phone,age,style})
  setLeft(res.data)
  alert('you are pre registered now')
