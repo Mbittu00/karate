@@ -68,6 +68,7 @@ onChange={(e)=>{
 <option value="All">All</option>
 </select>
 <button className='btn' onClick={submit}>Submit</button>
+  <a href="https://wa.me/+91 8695058047/?text=">Contact now</a>
  <p className='left'>{left.left} more left</p>
     </div>
   :<div className='loded'></div>
