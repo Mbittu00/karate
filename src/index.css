@@ -9,9 +9,10 @@ body {
   align-items: center;
   justify-content: center;
   
-  background-image: linear-gradient(#f2709c, #ff9472);
-    min-height: 100vh;
-    min-width: 100vw;
+  background-image: url('./img/pexels-artem-podrez-6253310.jpg');
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
